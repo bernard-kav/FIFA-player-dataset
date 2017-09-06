@@ -291,5 +291,4 @@ view: player_stats {
     drill_fields: [name]
   }
 
-
 }
