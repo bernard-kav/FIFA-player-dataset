@@ -49,16 +49,19 @@ view: player_personal_info {
 
     dimension: club_position {
       type: string
+      group_label: "Position"
       sql: ${TABLE}.Club_Position ;;
     }
 
     dimension: national_position {
       type: string
+      group_label: "Position"
       sql: ${TABLE}.National_Position ;;
   }
 
     dimension: preffered_position {
       type: string
+      group_label: "Position"
       sql: ${TABLE}.Preffered_Position ;;
   }
 
