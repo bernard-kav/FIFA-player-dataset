@@ -25,6 +25,12 @@ explore: player_stats {
     relationship: many_to_one
     sql_on: ${player_stats.nationality} = ${national_names.string_field_0} ;;
   }
+
+  join: player_personal_info {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${player_personal_info.name} = ${player_stats.name} ;;
+  }
 #   join: player_names {
 #     type: left_outer
 #     relationship: one_to_one
