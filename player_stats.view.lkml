@@ -103,10 +103,10 @@ view: player_stats {
     sql: ${TABLE}.Name ;;
   }
 
-  dimension: national_position {
-    type: string
-    sql: ${TABLE}.National_Position ;;
-  }
+#   dimension: national_position {
+#     type: string
+#     sql: ${TABLE}.National_Position ;;
+#   }
 
   dimension: penalties {
     type: number
