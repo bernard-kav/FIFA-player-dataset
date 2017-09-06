@@ -25,11 +25,11 @@ explore: player_stats {
     relationship: many_to_one
     sql_on: ${player_stats.nationality} = ${national_names.string_field_0} ;;
   }
-  join: player_names {
-    type: left_outer
-    relationship: one_to_one
-    sql_on: ${player_stats.name} = ${player_names.string_field_0} ;;
-  }
+#   join: player_names {
+#     type: left_outer
+#     relationship: one_to_one
+#     sql_on: ${player_stats.name} = ${player_names.string_field_0} ;;
+#   }
 }
 explore: player_personal_info {
   join: player_stats {
