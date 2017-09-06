@@ -3,6 +3,7 @@ view: player_names {
 
   dimension: string_field_0 {
     type: string
+    label: "Player Name"
     sql: ${TABLE}.string_field_0 ;;
   }
 
