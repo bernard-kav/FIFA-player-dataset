@@ -9,6 +9,7 @@ view: national_names {
 
   dimension: string_field_1 {
     type: string
+    hidden: yes
     sql: ${TABLE}.string_field_1 ;;
   }
 
