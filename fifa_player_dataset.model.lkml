@@ -31,3 +31,10 @@ explore: player_stats {
     sql_on: ${player_stats.name} = ${player_names.string_field_0} ;;
   }
 }
+explore: player_personal_info {
+  join: player_stats {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${player_personal_info.name} = ${player_stats.name} ;;
+  }
+}
