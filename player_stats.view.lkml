@@ -36,60 +36,12 @@ view: player_stats {
     sql: ${TABLE}.Ball_Control ;;
   }
 
-  dimension_group: birth {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}.Birth_Date ;;
-  }
-
-  dimension: club {
-    type: string
-    sql: ${TABLE}.Club ;;
-  }
-
-  dimension_group: club_joining {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}.Club_Joining ;;
-  }
-
-  dimension: club_kit {
-    type: number
-    sql: ${TABLE}.Club_Kit ;;
-  }
-
-  dimension: club_position {
-    type: string
-    sql: ${TABLE}.Club_Position ;;
-  }
 
   dimension: composure {
     type: number
     sql: ${TABLE}.Composure ;;
   }
 
-  dimension: contract_expiry {
-    type: number
-    sql: ${TABLE}.Contract_Expiry ;;
-  }
 
   dimension: crossing {
     type: number
@@ -116,39 +68,9 @@ view: player_stats {
     sql: ${TABLE}.Freekick_Accuracy ;;
   }
 
-  dimension: gk_diving {
-    type: number
-    sql: ${TABLE}.GK_Diving ;;
-  }
-
-  dimension: gk_handling {
-    type: number
-    sql: ${TABLE}.GK_Handling ;;
-  }
-
-  dimension: gk_kicking {
-    type: number
-    sql: ${TABLE}.GK_Kicking ;;
-  }
-
-  dimension: gk_positioning {
-    type: number
-    sql: ${TABLE}.GK_Positioning ;;
-  }
-
-  dimension: gk_reflexes {
-    type: number
-    sql: ${TABLE}.GK_Reflexes ;;
-  }
-
   dimension: heading {
     type: number
     sql: ${TABLE}.Heading ;;
-  }
-
-  dimension: height {
-    type: string
-    sql: ${TABLE}.Height ;;
   }
 
   dimension: interceptions {
@@ -181,34 +103,14 @@ view: player_stats {
     sql: ${TABLE}.Name ;;
   }
 
-  dimension: national_kit {
-    type: number
-    sql: ${TABLE}.National_Kit ;;
-  }
-
   dimension: national_position {
     type: string
     sql: ${TABLE}.National_Position ;;
   }
 
-  dimension: nationality {
-    type: string
-    sql: ${TABLE}.Nationality ;;
-  }
-
   dimension: penalties {
     type: number
     sql: ${TABLE}.Penalties ;;
-  }
-
-  dimension: preffered_foot {
-    type: string
-    sql: ${TABLE}.Preffered_Foot ;;
-  }
-
-  dimension: preffered_position {
-    type: string
-    sql: ${TABLE}.Preffered_Position ;;
   }
 
   dimension: rating {
@@ -276,14 +178,14 @@ view: player_stats {
     sql: ${TABLE}.Weak_foot ;;
   }
 
-  dimension: weight {
-    type: string
-    sql: ${TABLE}.Weight ;;
-  }
-
   dimension: work_rate {
     type: string
     sql: ${TABLE}.Work_Rate ;;
+  }
+
+  dimension: nationality {
+    type: string
+    sql: ${TABLE}.Nationality ;;
   }
 
   measure: count {

@@ -1,105 +1,35 @@
-view: player_personal_info {
+view: goalkeeper_stats {
+  sql_table_name: FIFA_Player_Data.player_stats;;
 
-    sql_table_name: FIFA_Player_Data.player_stats ;;
-
-  dimension: name {
+dimension: name {
     type: string
     sql: ${TABLE}.Name ;;
   }
 
-    dimension: age {
-      type: number
-      sql: ${TABLE}.Age ;;
-    }
+dimension: gk_diving {
+  type: number
+  sql: ${TABLE}.GK_Diving ;;
+}
 
-    dimension_group: birth {
-      type: time
-      timeframes: [
-        raw,
-        date,
-        week,
-        month,
-        quarter,
-        year
-      ]
-      convert_tz: no
-      datatype: date
-      sql: ${TABLE}.Birth_Date ;;
-    }
+dimension: gk_handling {
+  type: number
+  sql: ${TABLE}.GK_Handling ;;
+}
 
-    dimension: club {
-      type: string
-      sql: ${TABLE}.Club ;;
-    }
+dimension: gk_kicking {
+  type: number
+  sql: ${TABLE}.GK_Kicking ;;
+}
 
-    dimension_group: club_joining {
-      type: time
-      timeframes: [
-        raw,
-        date,
-        week,
-        month,
-        quarter,
-        year
-      ]
-      convert_tz: no
-      datatype: date
-      sql: ${TABLE}.Club_Joining ;;
-    }
+dimension: gk_positioning {
+  type: number
+  sql: ${TABLE}.GK_Positioning ;;
+}
 
-    dimension: club_position {
-      type: string
-      group_label: "Position"
-      sql: ${TABLE}.Club_Position ;;
-    }
-
-    dimension: national_position {
-      type: string
-      group_label: "Position"
-      sql: ${TABLE}.National_Position ;;
-  }
-
-    dimension: preffered_position {
-      type: string
-      group_label: "Position"
-      sql: ${TABLE}.Preffered_Position ;;
-  }
-
-    dimension: contract_expiry {
-      type: number
-      sql: ${TABLE}.Contract_Expiry ;;
-    }
-
-    dimension: height {
-      type: string
-      sql: ${TABLE}.Height ;;
-    }
-
-    dimension: weight {
-      type: string
-      sql: ${TABLE}.Weight ;;
-  }
-
-    dimension: nationality {
-      type: string
-      sql: ${TABLE}.Nationality ;;
-    }
-
-    dimension: preffered_foot {
-      type: string
-      sql: ${TABLE}.Preffered_Foot ;;
-    }
-
-    dimension: weak_foot {
-     type: number
-      sql: ${TABLE}.Weak_foot ;;
-  }
-
-    measure: count {
-      type: count
-      drill_fields: [name]
-    }
-
+dimension: gk_reflexes {
+  type: number
+  sql: ${TABLE}.GK_Reflexes ;;
+}
 
   # # You can specify the table name if it's different from the view name:
   # sql_table_name: my_schema_name.tester ;;
@@ -131,7 +61,7 @@ view: player_personal_info {
   # }
 }
 
-# view: player_personal_info {
+# view: goalkeeper_stats {
 #   # Or, you could make this view a derived table, like this:
 #   derived_table: {
 #     sql: SELECT
