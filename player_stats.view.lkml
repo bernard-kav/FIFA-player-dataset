@@ -101,6 +101,7 @@ view: player_stats {
   dimension: name {
     type: string
     sql: ${TABLE}.Name ;;
+    primary_key: yes
   }
 
 #   dimension: national_position {

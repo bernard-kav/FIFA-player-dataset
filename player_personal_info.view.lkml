@@ -5,6 +5,7 @@ view: player_personal_info {
   dimension: name {
     type: string
     sql: ${TABLE}.Name ;;
+    primary_key: yes
   }
 
     dimension: age {
