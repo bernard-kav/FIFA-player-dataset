@@ -31,12 +31,12 @@ explore: player_stats {
     relationship: one_to_many
     sql_on: ${player_personal_info.name} = ${player_stats.name} ;;
   }
-
   join: goalkeeper_stats {
     type: left_outer
     relationship: many_to_one
     sql_on: ${player_stats.name} = ${goalkeeper_stats.name} ;;
   }
+
 #   join: player_names {
 #     type: left_outer
 #     relationship: one_to_one
