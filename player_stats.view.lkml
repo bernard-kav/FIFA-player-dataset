@@ -199,12 +199,14 @@ view: player_stats {
   }
   measure: best_overall{
     type: average
-    sql: $ ${acceleration} + ${aggression} + ${agility} + ${balance}+${attacking_position}+${ball_control}+
+    sql:  ${acceleration} + ${aggression} + ${agility} + ${balance}+${attacking_position}+${ball_control}+
     ${dribbling}+${composure}+${crossing}+${crossing}+${curve}+${dribbling}+${finishing}+${freekick_accuracy}+${heading}
     +${interceptions}+${jumping}+${long_pass}+${long_shots}+${marking}+${penalties}+${rating}+${reactions}+${short_pass}+${shot_power}
     +${shot_power}+${skill_moves}+${sliding_tackle}+${strength}+${vision}+${volleys}+${weak_foot}+${work_rate}/34
     ;;
-
+  }
+  measure: count {
+    type: count
   }
 
 
