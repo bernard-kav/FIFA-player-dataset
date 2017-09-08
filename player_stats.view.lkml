@@ -189,9 +189,23 @@ view: player_stats {
     sql: ${TABLE}.Nationality ;;
   }
 
-  measure: count {
+  measure: defending {
     type: count
-    drill_fields: [name]
+    drill_fields: [age, agility, sliding_tackle, standing_tackle, strength,stamina,composure,balance]
   }
+  measure: fastest_player{
+    type: max
+    sql: ${TABLE}.speed ;;
+  }
+  measure: best_overall{
+    type: average
+    sql: $ ${acceleration} + ${aggression} + ${agility} + ${balance}+${attacking_position}+${ball_control}+
+    ${dribbling}+${composure}+${crossing}+${crossing}+${curve}+${dribbling}+${finishing}+${freekick_accuracy}+${heading}
+    +${interceptions}+${jumping}+${long_pass}+${long_shots}+${marking}+${penalties}+${rating}+${reactions}+${short_pass}+${shot_power}
+    +${shot_power}+${skill_moves}+${sliding_tackle}+${strength}+${vision}+${volleys}+${weak_foot}+${work_rate}/34
+    ;;
+
+  }
+
 
 }
