@@ -201,6 +201,10 @@ view: player_stats {
   measure: count {
     type: count
   }
+  measure: average {
+    type: average
+    sql: ${rating} ;;
+  }
 
 
 }
