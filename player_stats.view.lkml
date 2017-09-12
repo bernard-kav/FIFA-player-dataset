@@ -205,6 +205,10 @@ view: player_stats {
     type: average
     sql: ${rating} ;;
   }
+  measure: percent_of_total{
+    type: percent_of_total
+    sql: ${rating} ;;
+  }
 
 
 }
